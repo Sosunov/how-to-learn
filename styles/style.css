@@ -38,6 +38,8 @@
   font-size: 102px;
   font-weight: bold;
   margin-left: 64px;
+  margin-top: 0;
+  margin-bottom: 0;
   z-index: 99;
 }
 
@@ -46,6 +48,8 @@
   width: 388px;
   left: 64px;
   bottom: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
@@ -70,6 +74,10 @@ align-self: center;
   top: 65px;
   background-color:#2f80ed;
   z-index: 96;
+}
+.header__link{
+  text-decoration: none;
+  color: #2f80ed;
 }
 
 .description{
@@ -180,12 +188,13 @@ margin: 0;
 }
 
 .feynman{
-  height: 890px;
+  min-height: 890px;
   background-image: url("../images/feynman.png");
   background-position: bottom left;
   background-repeat: no-repeat;
   text-align: center;
   position: relative;
+  padding-top: 100px;
   background-color: #f2f2f2;
 }
 
@@ -202,6 +211,7 @@ line-height: 51px;
 font-size: 36px;
 font-weight: normal;
 margin-top: 70px;
+margin-bottom: 0;
 }
 
 .feynman__link{
@@ -211,16 +221,18 @@ margin-top: 70px;
   font-size: 36px;
   font-weight: normal;
   top: 50%;
+  text-decoration: none;
+  color: #2f80ed;
 }
 
 .kaufman{
-  background-color: #000000;
+  background-color: #1f1f1f;
   overflow: hidden;
   display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
-  z-index: -1;
+  z-index: 1;
 }
 
 .section-title_theme_dark{
@@ -286,7 +298,9 @@ z-index: 10;
 }
 
 .kaufman__triangle{
+  background-image: url('../images/kaufman-triangle.svg');
   position: absolute;
+  background-size: cover;
   width: 877px;
   height: 877px;
   right: -210px;
@@ -294,7 +308,7 @@ z-index: 10;
 }
 
 .footer{
-  background-color: black;
+  background-color: #1f1f1f;
   color: white;
   display: flex;
 }
@@ -311,12 +325,14 @@ z-index: 10;
 .footer__column_content_copyright{
   flex-basis: 711px;
   display: flex;
-  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .footer__column_content_social{
   z-index: 20;
 }
-.footer_author{
+.footer__author{
   margin-bottom: 18px;
   margin-top: 18px;
   line-height: 25px;
@@ -336,6 +352,12 @@ z-index: 10;
   padding-bottom: 16px;
   display: flex;
   flex-direction: column;
+ list-style: none;
+}
+.footer__social-icon{
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
 }
 
 .footer__column-link{
@@ -345,6 +367,3 @@ z-index: 10;
   color: white;
 }
 
-.logo_place_footer{
-  position: absolute;
-}
